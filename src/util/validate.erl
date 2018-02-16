@@ -34,12 +34,15 @@ choose_scheme(_Method, PathLength, Body) ->
 
 check_valid_body(Body) ->
   log:debug("Body  ~p", [Body]),
-  case xml:xml_to_list(Body) of
-    {ok, List} ->
-      {ok, jsx:encode(xml:move_attrs([List]))};
-    ErrorReason ->
-      log:error("{validate_check_valid_body} ~p", [ErrorReason]),
-      throw(?IncorrectBody)
+  try
+    xml:move_attrs(mochiweb_html:parse(Body))
+  of
+    FormatData ->
+      {ok, jsx:encode([FormatData])}
+  catch
+      _:ErrorReason  ->
+        log:error("{validate_check_valid_body} ~p", [ErrorReason]),
+        throw(?IncorrectBody)
   end.
 
 

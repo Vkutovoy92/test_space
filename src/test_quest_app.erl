@@ -3,7 +3,7 @@
 %% @end
 %%%-------------------------------------------------------------------
 
--module(test_project_app).
+-module(test_quest_app).
 
 -behaviour(application).
 
@@ -16,7 +16,7 @@
 
 start(_StartType, _StartArgs) ->
     start_web_server(),
-    test_project_sup:start_link().
+    test_quest_sup:start_link().
 
 %%--------------------------------------------------------------------
 stop(_State) ->
@@ -33,7 +33,7 @@ start_web_server() ->
         ]}
     ]),
 
-    {ok, Config}  = application:get_env(test_project, web_server),
+    {ok, Config}  = application:get_env(test_quest, web_server),
 
     Port          = proplists:get_value(port,            Config),
     MaxConnection = proplists:get_value(max_connections, Config),

@@ -18,7 +18,7 @@ start_link() ->
 
 init([]) ->
 
-  {ok, Pools}  = application:get_env(test_project, db_pools),
+  {ok, Pools}  = application:get_env(test_quest, db_pools),
 
   PoolSpecs = lists:map(fun({Name, SizeArgs, WorkerArgs}) ->
     PoolArgs = [{name, {local, Name}}, {worker_module, db_worker}] ++ SizeArgs,

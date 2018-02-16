@@ -1,4 +1,4 @@
-PROJECT=test_project
+PROJECT=test_quest
 
 
 REBAR3 = rebar3
