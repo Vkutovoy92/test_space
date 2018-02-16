@@ -1,0 +1,13 @@
+%%-*- mode: erlang -*-
+
+{application, exomler, [
+    {description, ""},
+    {vsn, "0.7.0"},
+    {registered, []},
+    {applications, [
+        kernel,
+        stdlib
+    ]},
+    {modules, []},
+    {env, []}
+ ]}.

@@ -1,0 +1,13 @@
+{application,test_project,
+             [{description,"An OTP application"},
+              {vsn,"1.0"},
+              {registered,[]},
+              {mod,{test_project_app,[]}},
+              {applications,[]},
+              {env,[]},
+              {modules,[db_main,db_sup,db_worker,http_handler,log,main,
+                        not_found_handler,test_project_app,test_project_sup,
+                        validate,xml]},
+              {maintainers,[]},
+              {licenses,["Apache 2.0"]},
+              {links,[]}]}.
