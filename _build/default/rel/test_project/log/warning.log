@@ -1,3 +1,0 @@
-2018-02-16 18:30:15.012 [warning] <0.574.0> lager_error_logger_h dropped 1 messages in the last second that exceeded the limit of 50 messages/sec
-2018-02-16 18:44:54.014 [warning] <0.574.0> lager_error_logger_h dropped 2 messages in the last second that exceeded the limit of 50 messages/sec
-2018-02-16 20:36:57.012 [warning] <0.574.0> lager_error_logger_h dropped 1 messages in the last second that exceeded the limit of 50 messages/sec
